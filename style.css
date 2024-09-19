@@ -1,3 +1,66 @@
+body {
+    font-family: "Inter", sans-serif;
+    background-color: #F0F0F0;
+    margin: 0px;
+}
+
+/* Margin e Padding */
+.p-none{
+    padding: 0px;
+}
+.m-none{
+    margin: 0px;
+}
+
+/* Menu */
+header{
+    width: 100%;
+    padding: 10px 0px;
+}
+nav{
+    width: 100%;
+    background-color: white;
+    padding: 10px 0px;
+}
+nav a{
+    text-decoration: none;
+    color: black;
+    margin: 0px 30px;
+}
+nav a:hover{
+    text-decoration: underline;
+}
+
+/* Display */
+.d-flex{
+    display: flex;
+}
+
+/* Formatacao */
+.center{
+    text-align: center;
+}
+.justify-content-around{
+    justify-content: space-around;
+}
+.justify-content-center{
+    justify-content: center;
+}
+.align-self-center{
+    align-self: center;
+}
+
+/* Altura e Largura */
+.w-33{
+    width: 33%;
+}
+.w-50{
+    width: 50%;
+}
+.w-100{
+    width: 100%;
+}
+
 /* Fonts */
 .font-vt323 {
     font-family: "VT323", monospace;
@@ -10,4 +73,48 @@
   font-optical-sizing: auto;
   font-weight: 400; 
   font-style: normal;
+}
+
+/* Buttons */
+.btn{
+    padding: 10px 12px;
+    border-radius: 4px;
+    font-size: 15px;
+}
+.btn:hover{
+    font-size: 17px;
+}
+
+.btn-black{
+    color: white;
+    background-color: black;
+    border: none;
+}
+.btn-white{
+    color: black;
+    background-color: white;
+    border: 1px solid #A8A8A8;
+}
+
+/* Barra de Pesquisa */
+.search-bar{
+    width: fit-content;
+    padding: 5px;
+    align-self: center;
+    position: relative;
+    border: 1px solid #A8A8A8;
+    border-radius: 10px;
+}
+.search-bar .search-input{
+    border: none;
+}
+.search-bar .search-input:focus-visible{
+    outline: none;
+}
+.search-bar .search-icon{
+    position: absolute;
+    right: 10px;
+    bottom: 6px;
+    color: #a1a1a1;
+    transition: all 0.1s ease-in-out;
 }
