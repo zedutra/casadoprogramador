@@ -8,6 +8,16 @@ body {
 .p-none{
     padding: 0px;
 }
+.p-25px{
+    padding: 25px;
+}
+.p-40px{
+    padding: 40px;
+}
+.py-25px{
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
 .m-none{
     margin: 0px;
 }
@@ -94,6 +104,9 @@ nav a:hover{
 }
 .w-70{
     width: 70%;
+}
+.w-80{
+    width: 80%;
 }
 .w-100{
     width: 100%;
@@ -185,4 +198,33 @@ td, th{
     width: 60px;
     height: 60px;
     background-color: #D9D9D9;
+}
+
+/* Cards */
+.card{
+    background-color: white;
+    border: 1px solid #A8A8A8;
+    text-align: center;
+    padding: 18px;
+    width: 20%;
+}
+.card img{
+    border-radius: 100%;
+    width: 150px;
+    height: 150px;
+}
+
+/* Cards Topicos */
+.card-topico{
+    background-color: white;
+    border: 1px solid #A8A8A8;
+    border-radius: 10px;
+    text-align: start;
+    padding: 18px;
+    width: 20%;
+}
+.card-topico img{
+    border-radius: 100%;
+    width: 150px;
+    height: 150px;
 }
