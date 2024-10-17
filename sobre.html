@@ -55,26 +55,30 @@
             <h2>Desenvolvedores</h2>
             <div class="d-flex justify-content-around">
                 <div class="card">
-                    <img src="/img/sample-profile.webp" alt="Profile picture">
+                    <img src="/img/sample-profile.webp" alt="Profile picture" class="profile-img" onclick="openModal(this)">
                     <h2>José Vitor Dutra Antônio</h2>
                     <p>Responsável pela implementação HTML e CSS</p>
                 </div>
                 <div class="card">
-                    <img src="/img/sample-profile.webp" alt="Profile picture">
+                    <img src="/img/sample-profile.webp" alt="Profile picture" class="profile-img" onclick="openModal(this)">
                     <h2>Marcelo Expedito Costa de Oliveira</h2>
                     <p>Responsável pela implementação HTML e CSS</p>
                 </div>
                 <div class="card">
-                    <img src="/img/sample-profile.webp" alt="Profile picture">
+                    <img src="/img/sample-profile.webp" alt="Profile picture" class="profile-img" onclick="openModal(this)">
                     <h2>Miguel Gomes Fecchio</h2>
                     <p>Responsável pelo design da interface</p>
                 </div>
                 <div class="card">
-                    <img src="/img/sample-profile.webp" alt="Profile picture">
+                    <img src="/img/sample-profile.webp" alt="Profile picture" class="profile-img" onclick="openModal(this)">
                     <h2>Nasser N. Fares</h2>
                     <p>Responsável pela implementação HTML e CSS</p>
                 </div>
             </div>
+        </div>
+        <div id="imageModal" class="modal">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="modalImage">
         </div>
     </main>
     <!-- /Sobre -->
@@ -83,5 +87,8 @@
     <!-- Ion Icons -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!-- Referência ao javascript -->
+    <script src="jsmodal.js"></script>
 </body>
 </html>
