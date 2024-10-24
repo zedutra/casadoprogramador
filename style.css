@@ -307,3 +307,37 @@ td, th{
         width: 95%;
     }
 }
+
+.error-message {
+    color: red;
+    font-size: 0.875em; /* ou outro tamanho desejado */
+    margin-top: 5px;
+}
+
+/* Cursor de mão no hover */
+.like-button {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.like-button:hover {
+    color: #FF0000;
+    transform: scale(1.2);
+}
+
+/* Animação de "pulso" */
+.like-button.pulsate {
+    animation: pulse 0.3s;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.3);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
