@@ -24,12 +24,20 @@
     <main class="d-flex justify-content-center">
         <div class="card-login">
             <h2>Registrar</h2>
-            <form action="#">
-                <input type="text" name="name" class="w-100 mb-2" placeholder="Nome completo">
-                <input type="email" name="email" class="w-100 mb-2" placeholder="E-mail">
-                <input type="password" name="password" class="w-100 mb-2" placeholder="Senha">
-                <input type="password" name="password" class="w-100 mb-2" placeholder="Confirmar senha">
-                <button type="submit" class="btn btn-black w-100">Entrar</button>
+            <form id="registrationForm" action="#">
+                <input type="text" name="name" class="w-100 mb-2" placeholder="Nome completo" required>
+                <span id="nameError" class="error-message"></span>
+                
+                <input type="email" name="email" class="w-100 mb-2" placeholder="E-mail" required>
+                <span id="emailError" class="error-message"></span>
+                
+                <input type="password" id="password" name="password" class="w-100 mb-2" placeholder="Senha" required>
+                <span id="passwordError" class="error-message"></span>
+                
+                <input type="password" id="confirmPassword" name="confirmPassword" class="w-100 mb-2" placeholder="Confirmar senha" required>
+                <span id="confirmPasswordError" class="error-message"></span>
+                
+                <button type="submit" class="btn btn-black w-100">Registrar</button>
             </form>
             <div class="mt-3 mb-2">
                 <a href="/login.html">Faça Login</a>
@@ -38,6 +46,52 @@
     </main>
     <!-- /Form -->
 
+    <!-- Validação -->
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Limpar mensagens de erro anteriores
+            document.getElementById('nameError').textContent = '';
+            document.getElementById('emailError').textContent = '';
+            document.getElementById('passwordError').textContent = '';
+            document.getElementById('confirmPasswordError').textContent = '';
+
+            const name = this.name.value.trim();
+            const email = this.email.value.trim();
+            const password = this.password.value;
+            const confirmPassword = this.confirmPassword.value;
+
+            // Validação do nome
+            if (name === '') {
+                document.getElementById('nameError').textContent = 'Por favor, insira seu nome completo.';
+                return;
+            }
+
+            // Validação do e-mail
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                document.getElementById('emailError').textContent = 'Por favor, insira um e-mail válido.';
+                return;
+            }
+
+            // Validação da senha
+            if (password.length < 6) {
+                document.getElementById('passwordError').textContent = 'A senha deve ter pelo menos 6 caracteres.';
+                return;
+            }
+
+            // Verificação se as senhas coincidem
+            if (password !== confirmPassword) {
+                document.getElementById('confirmPasswordError').textContent = 'As senhas não coincidem. Por favor, tente novamente.';
+                return;
+            }
+
+            alert('Registro realizado com sucesso!');
+            this.submit(); // Descomente para permitir o envio do formulário
+        });
+    </script>
+    <!-- Validação -->
 
     <!-- Ion Icons -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
